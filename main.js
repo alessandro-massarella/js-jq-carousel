@@ -13,17 +13,26 @@ $(document).ready(function(){
 // per scorrere il carosello in avanti
   $('.slider-wrapper .next').click(function() {
     var activeImg = $('.slider-wrapper .images img.active');
-      activeImg.removeClass('active')
+
+    // se l'immagine attiva sarà l'ultima, avrà la classe last, a quel punto andrò a dare la classe active alla prima immagine (che ha classe first) in modo tale da avere un carosello circolare 
+
+    if (activeImg.hasClass('last')) {
+      $('.slider-wrapper .images img.first').addClass('active')
+    } else {
       activeImg.next().addClass('active')
+    }
+      activeImg.removeClass('active')
     })
 
 // per scorrere il carosello all'indietro
   $('.slider-wrapper .prev').click(function() {
     var activeImg = $('.slider-wrapper .images img.active');
+
+    if (activeImg.hasClass('first')) {
+      $('.slider-wrapper .images img.last').addClass('active')
+    } else {
+            activeImg.prev().addClass('active')
+    }
       activeImg.removeClass('active')
-      activeImg.prev().addClass('active')
     })
-
-
-
 })

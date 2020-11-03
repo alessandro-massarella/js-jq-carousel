@@ -61,12 +61,12 @@ $(document).ready(function(){
 
 
     // USO DELLA TASTIERA PER LO SCORRIMENTO-------------
-    $(document).keydown( function(eventObject) {
-     if(eventObject.which==37) {   //freccia sinistra
-        $('.slider-wrapper .prev').click();  //simula il click sulla freccia prev
-     } else if(eventObject.which==39) {  //freccia destra
-        $('.slider-wrapper .next').click();  //simula il click sulla freccia next
-     }
+$(document).keydown(function(eventObject) {
+ if(eventObject.which==37) {   //freccia sinistra
+    $('.slider-wrapper .prev').click();  //simula il click sulla freccia prev
+ } else if(eventObject.which==39) {  //freccia destra
+    $('.slider-wrapper .next').click();  //simula il click sulla freccia next
+ }
 } );
 
 
